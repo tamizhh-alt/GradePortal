@@ -1,1 +1,2 @@
 2025-07-17 Initial project structure with JavaFX and Maven setup
+2025-07-18 Added DatabaseManager and integrated MySQL connector
