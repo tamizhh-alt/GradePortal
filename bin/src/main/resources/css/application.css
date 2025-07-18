@@ -1,0 +1,445 @@
+/* ===========================
+   Grades & Marks Portal CSS
+   Professional Theme
+   =========================== */
+
+/* Root Variables */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    
+    /* Color Palette */
+    -fx-primary: #3B82F6;
+    -fx-primary-dark: #2563EB;
+    -fx-secondary: #6B7280;
+    -fx-success: #10B981;
+    -fx-warning: #F59E0B;
+    -fx-danger: #EF4444;
+    -fx-light: #F9FAFB;
+    -fx-dark: #111827;
+    -fx-white: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-text-color: #374151;
+    -fx-text-muted: #6B7280;
+    
+    /* Spacing */
+    -fx-spacing-xs: 4px;
+    -fx-spacing-sm: 8px;
+    -fx-spacing-md: 16px;
+    -fx-spacing-lg: 24px;
+    -fx-spacing-xl: 32px;
+    
+    /* Border Radius */
+    -fx-border-radius: 6px;
+    -fx-border-radius-lg: 8px;
+}
+
+/* ===========================
+   Base Styles
+   =========================== */
+
+.label {
+    -fx-text-fill: -fx-text-color;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: -fx-border-radius;
+    -fx-border-radius: -fx-border-radius;
+    -fx-cursor: hand;
+}
+
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-font-size: 14px;
+    -fx-padding: 8 12 8 12;
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius;
+    -fx-background-radius: -fx-border-radius;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.2), 4, 0, 0, 0);
+}
+
+/* ===========================
+   Header Styles
+   =========================== */
+
+.header-container {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-bar {
+    -fx-background-color: -fx-white;
+}
+
+.app-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary;
+}
+
+.status-label {
+    -fx-text-fill: -fx-success;
+    -fx-font-weight: bold;
+}
+
+.time-label {
+    -fx-text-fill: -fx-text-muted;
+}
+
+/* ===========================
+   Footer Styles
+   =========================== */
+
+.footer-bar {
+    -fx-background-color: -fx-light;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1 0 0 0;
+}
+
+.footer-text {
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 12px;
+}
+
+/* ===========================
+   Tab Pane Styles
+   =========================== */
+
+.main-tab-pane {
+    -fx-background-color: -fx-light;
+}
+
+.main-tab-pane .tab-header-area {
+    -fx-padding: 0 0 0 0;
+}
+
+.main-tab-pane .tab {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1 1 0 1;
+    -fx-padding: 12 20 12 20;
+    -fx-font-weight: 500;
+}
+
+.main-tab-pane .tab:selected {
+    -fx-background-color: -fx-primary;
+    -fx-text-base-color: -fx-white;
+}
+
+.main-tab-pane .tab-content-area {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: 0 0 -fx-border-radius -fx-border-radius;
+    -fx-background-radius: 0 0 -fx-border-radius -fx-border-radius;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-dark;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -fx-dark;
+}
+
+.form-label {
+    -fx-font-weight: 500;
+    -fx-text-fill: -fx-text-color;
+}
+
+.panel-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -fx-dark;
+}
+
+/* ===========================
+   Form Styles
+   =========================== */
+
+.form-container {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius-lg;
+    -fx-background-radius: -fx-border-radius-lg;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+.form-field {
+    -fx-pref-width: 200px;
+}
+
+.search-field {
+    -fx-pref-width: 250px;
+}
+
+.filter-container {
+    -fx-background-color: -fx-light;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius;
+    -fx-background-radius: -fx-border-radius;
+}
+
+/* ===========================
+   Button Styles
+   =========================== */
+
+.primary-button {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-white;
+    -fx-font-weight: 500;
+}
+
+.primary-button:hover {
+    -fx-background-color: -fx-primary-dark;
+}
+
+.secondary-button {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-white;
+    -fx-font-weight: 500;
+}
+
+.secondary-button:hover {
+    -fx-background-color: derive(-fx-secondary, -20%);
+}
+
+.danger-button {
+    -fx-background-color: -fx-danger;
+    -fx-text-fill: -fx-white;
+    -fx-font-weight: 500;
+}
+
+.danger-button:hover {
+    -fx-background-color: derive(-fx-danger, -20%);
+}
+
+.outline-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-color;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-font-weight: 500;
+}
+
+.outline-button:hover {
+    -fx-background-color: -fx-light;
+}
+
+/* ===========================
+   Table Styles
+   =========================== */
+
+.table-view {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius;
+    -fx-background-radius: -fx-border-radius;
+}
+
+.table-view .column-header {
+    -fx-background-color: -fx-light;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-weight: 600;
+    -fx-text-fill: -fx-dark;
+    -fx-padding: 12 8 12 8;
+}
+
+.table-view .table-cell {
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 8 8 8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(59, 130, 246, 0.1);
+    -fx-text-fill: -fx-dark;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* ===========================
+   Dashboard Styles
+   =========================== */
+
+.stat-card {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius-lg;
+    -fx-background-radius: -fx-border-radius-lg;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+.stat-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-weight: 500;
+}
+
+.stat-value {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary;
+}
+
+.dashboard-panel {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius-lg;
+    -fx-background-radius: -fx-border-radius-lg;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+.grade-distribution-item {
+    -fx-font-family: monospace;
+    -fx-padding: 4 0 4 0;
+}
+
+/* ===========================
+   Special Components
+   =========================== */
+
+.grade-display {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 4 8 4 8;
+    -fx-background-color: -fx-light;
+    -fx-border-radius: -fx-border-radius;
+    -fx-background-radius: -fx-border-radius;
+}
+
+.report-area {
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 12px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius;
+    -fx-background-radius: -fx-border-radius;
+}
+
+/* ===========================
+   List View Styles
+   =========================== */
+
+.list-view {
+    -fx-background-color: -fx-white;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: -fx-border-radius;
+    -fx-background-radius: -fx-border-radius;
+}
+
+.list-cell {
+    -fx-padding: 8 12 8 12;
+    -fx-border-color: -fx-border-color;
+    -fx-border-width: 0 0 1 0;
+}
+
+.list-cell:selected {
+    -fx-background-color: rgba(59, 130, 246, 0.1);
+    -fx-text-fill: -fx-dark;
+}
+
+.list-cell:hover {
+    -fx-background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* ===========================
+   Scroll Pane Styles
+   =========================== */
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: -fx-light;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -fx-secondary;
+    -fx-background-radius: 10px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: derive(-fx-secondary, -20%);
+}
+
+/* ===========================
+   Alert Dialog Styles
+   =========================== */
+
+.alert .header-panel {
+    -fx-background-color: -fx-primary;
+}
+
+.alert .header-panel .label {
+    -fx-text-fill: -fx-white;
+}
+
+/* ===========================
+   Responsive Adjustments
+   =========================== */
+
+@media screen and (max-width: 800px) {
+    .app-title {
+        -fx-font-size: 20px;
+    }
+    
+    .page-title {
+        -fx-font-size: 24px;
+    }
+    
+    .form-field {
+        -fx-pref-width: 150px;
+    }
+}
+
+/* ===========================
+   Animation and Transitions
+   =========================== */
+
+.button {
+    -fx-effect: null;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+}
+
+.form-container, .stat-card, .dashboard-panel {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+.form-container:hover, .stat-card:hover, .dashboard-panel:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 6, 0, 0, 3);
+}

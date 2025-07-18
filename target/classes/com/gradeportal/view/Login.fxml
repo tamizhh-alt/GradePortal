@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.gradeportal.controller.LoginController"
+           styleClass="root">
+
+    <VBox spacing="20" alignment="CENTER" maxWidth="400">
+        <Label text="Grades Portal Login" styleClass="page-title"/>
+
+        <TextField fx:id="usernameField" promptText="Username" maxWidth="300" />
+        <PasswordField fx:id="passwordField" promptText="Password" maxWidth="300" />
+
+        <Button text="Login" onAction="#handleLogin" maxWidth="300" styleClass="primary-button" />
+
+        <!-- Optional: Add this line for future links -->
+        <!-- <Hyperlink text="Forgot password?" /> -->
+
+    </VBox>
+
+</StackPane>

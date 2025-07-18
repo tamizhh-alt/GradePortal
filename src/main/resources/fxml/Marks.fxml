@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.MarksController">
+   <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      
+      <!-- Page Header -->
+      <Label styleClass="page-title" text="Marks Entry" />
+      
+      <!-- Marks Entry Form -->
+      <VBox spacing="15.0" styleClass="form-container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         
+         <Label styleClass="section-title" text="Enter Student Marks" />
+         
+         <GridPane hgap="15.0" vgap="10.0">
+            <columnConstraints>
+               <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+               <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            
+            <Label styleClass="form-label" text="Student:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ComboBox fx:id="studentComboBox" promptText="Select student" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label styleClass="form-label" text="Subject:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <ComboBox fx:id="subjectComboBox" promptText="Select subject" styleClass="form-field" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            
+            <Label styleClass="form-label" text="Marks Obtained:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="marksTextField" promptText="Enter marks (0-100)" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label styleClass="form-label" text="Entry Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <DatePicker fx:id="entryDatePicker" styleClass="form-field" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </GridPane>
+         
+         <!-- Grade Display -->
+         <HBox spacing="10.0">
+            <Label styleClass="form-label" text="Calculated Grade:" />
+            <Label fx:id="gradeLabel" styleClass="grade-display" text="Enter marks to see grade" />
+         </HBox>
+         
+         <!-- Action Buttons -->
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Button fx:id="addButton" onAction="#handleAdd" styleClass="primary-button" text="Add Marks" />
+            <Button fx:id="updateButton" onAction="#handleUpdate" styleClass="secondary-button" text="Update Marks" />
+            <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="danger-button" text="Delete Marks" />
+            <Button fx:id="clearButton" onAction="#handleClear" styleClass="outline-button" text="Clear Form" />
+         </HBox>
+      </VBox>
+      
+      <!-- Marks Table -->
+      <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+         <Label styleClass="section-title" text="All Marks" />
+         
+         <TableView fx:id="marksTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="studentNameColumn" prefWidth="150.0" text="Student Name" />
+               <TableColumn fx:id="rollNumberColumn" prefWidth="100.0" text="Roll No." />
+               <TableColumn fx:id="subjectNameColumn" prefWidth="120.0" text="Subject" />
+               <TableColumn fx:id="marksColumn" prefWidth="80.0" text="Marks" />
+               <TableColumn fx:id="gradeColumn" prefWidth="60.0" text="Grade" />
+               <TableColumn fx:id="entryDateColumn" prefWidth="120.0" text="Entry Date" />
+            </columns>
+         </TableView>
+      </VBox>
+   </VBox>
+</AnchorPane>

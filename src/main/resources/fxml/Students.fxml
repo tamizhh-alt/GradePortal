@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.StudentsController">
+   <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      
+      <!-- Page Header -->
+      <Label styleClass="page-title" text="Student Management" />
+      
+      <!-- Student Form -->
+      <VBox spacing="15.0" styleClass="form-container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         
+         <Label styleClass="section-title" text="Student Information" />
+         
+         <GridPane hgap="15.0" vgap="10.0">
+            <columnConstraints>
+               <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+               <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            
+            <Label styleClass="form-label" text="Student Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nameTextField" promptText="Enter student's full name" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label styleClass="form-label" text="Roll Number:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextField fx:id="rollNumberTextField" promptText="Enter unique roll number" styleClass="form-field" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            
+            <Label styleClass="form-label" text="Class/Grade:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ComboBox fx:id="classComboBox" promptText="Select class" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <Label styleClass="form-label" text="Registration Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <DatePicker fx:id="registrationDatePicker" styleClass="form-field" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </GridPane>
+         
+         <!-- Action Buttons -->
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Button fx:id="addButton" onAction="#handleAdd" styleClass="primary-button" text="Add Student" />
+            <Button fx:id="updateButton" onAction="#handleUpdate" styleClass="secondary-button" text="Update Student" />
+            <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="danger-button" text="Delete Student" />
+            <Button fx:id="clearButton" onAction="#handleClear" styleClass="outline-button" text="Clear Form" />
+         </HBox>
+      </VBox>
+      
+      <!-- Search and Table -->
+      <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label styleClass="section-title" text="Students List" />
+            <Region HBox.hgrow="ALWAYS" />
+            <TextField fx:id="searchTextField" promptText="Search by name or roll number..." styleClass="search-field" />
+         </HBox>
+         
+         <TableView fx:id="studentsTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Student Name" />
+               <TableColumn fx:id="rollNumberColumn" prefWidth="120.0" text="Roll Number" />
+               <TableColumn fx:id="classColumn" prefWidth="100.0" text="Class" />
+               <TableColumn fx:id="registrationDateColumn" prefWidth="150.0" text="Registration Date" />
+            </columns>
+         </TableView>
+      </VBox>
+   </VBox>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.ResultsController">
+   <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      
+      <!-- Page Header -->
+      <Label styleClass="page-title" text="Results &amp; Reports" />
+      
+      <!-- Filters and Actions -->
+      <HBox spacing="15.0" styleClass="filter-container">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         
+         <Label styleClass="form-label" text="Filter by Student:" />
+         <ComboBox fx:id="studentFilterComboBox" promptText="Select student" styleClass="form-field" />
+         
+         <Label styleClass="form-label" text="Search:" />
+         <TextField fx:id="searchTextField" promptText="Search results..." styleClass="search-field" />
+         
+         <Region HBox.hgrow="ALWAYS" />
+         
+         <Button fx:id="generateReportButton" onAction="#handleGenerateReport" styleClass="primary-button" text="Generate Report" />
+         <Button fx:id="exportButton" onAction="#handleExport" styleClass="secondary-button" text="Export Results" />
+      </HBox>
+      
+      <!-- Main Content Area -->
+      <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+         <!-- Results Table -->
+         <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="section-title" text="Student Results" />
+            
+            <TableView fx:id="resultsTable" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="studentNameColumn" prefWidth="140.0" text="Student Name" />
+                  <TableColumn fx:id="rollNumberColumn" prefWidth="90.0" text="Roll No." />
+                  <TableColumn fx:id="subjectNameColumn" prefWidth="110.0" text="Subject" />
+                  <TableColumn fx:id="marksColumn" prefWidth="70.0" text="Marks" />
+                  <TableColumn fx:id="gradeColumn" prefWidth="60.0" text="Grade" />
+                  <TableColumn fx:id="entryDateColumn" prefWidth="100.0" text="Date" />
+               </columns>
+            </TableView>
+         </VBox>
+         
+         <!-- Report Display -->
+         <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label styleClass="section-title" text="Student Report" />
+            
+            <TextArea fx:id="reportTextArea" editable="false" styleClass="report-area" VBox.vgrow="ALWAYS" 
+                      wrapText="true" />
+         </VBox>
+      </HBox>
+   </VBox>
+</AnchorPane>

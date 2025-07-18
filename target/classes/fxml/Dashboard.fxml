@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.DashboardController">
+   <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      
+      <!-- Dashboard Header -->
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <Label styleClass="page-title" text="Dashboard" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Button onAction="#handleRefresh" styleClass="primary-button" text="Refresh" />
+      </HBox>
+      
+      <!-- Statistics Cards -->
+      <HBox spacing="20.0" VBox.vgrow="NEVER">
+         <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label styleClass="stat-title" text="Total Students" />
+            <Label fx:id="totalStudentsLabel" styleClass="stat-value" text="0" />
+         </VBox>
+         
+         <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label styleClass="stat-title" text="Total Subjects" />
+            <Label fx:id="totalSubjectsLabel" styleClass="stat-value" text="0" />
+         </VBox>
+         
+         <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label styleClass="stat-title" text="Total Marks Entered" />
+            <Label fx:id="totalMarksLabel" styleClass="stat-value" text="0" />
+         </VBox>
+      </HBox>
+      
+      <!-- Content Area -->
+      <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+         <!-- Top Performers -->
+         <VBox styleClass="dashboard-panel" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label styleClass="panel-title" text="Top Performers" />
+            <ListView fx:id="topPerformersListView" VBox.vgrow="ALWAYS" />
+         </VBox>
+         
+         <!-- Grade Distribution -->
+         <VBox styleClass="dashboard-panel" HBox.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <Label styleClass="panel-title" text="Grade Distribution" />
+            <ScrollPane VBox.vgrow="ALWAYS">
+               <VBox fx:id="gradeDistributionBox" spacing="5.0" />
+            </ScrollPane>
+         </VBox>
+      </HBox>
+   </VBox>
+</AnchorPane>

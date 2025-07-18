@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.SubjectsController">
+   <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      
+      <!-- Page Header -->
+      <Label styleClass="page-title" text="Subject Management" />
+      
+      <!-- Subject Form -->
+      <VBox spacing="15.0" styleClass="form-container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         
+         <Label styleClass="section-title" text="Subject Information" />
+         
+         <GridPane hgap="15.0" vgap="10.0">
+            <columnConstraints>
+               <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+               <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+            
+            <Label styleClass="form-label" text="Subject Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="subjectNameTextField" promptText="Enter subject name" styleClass="form-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <Label styleClass="form-label" text="Maximum Marks:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextField fx:id="maxMarksTextField" promptText="Enter maximum marks" styleClass="form-field" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+         </GridPane>
+         
+         <!-- Action Buttons -->
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Button fx:id="addButton" onAction="#handleAdd" styleClass="primary-button" text="Add Subject" />
+            <Button fx:id="updateButton" onAction="#handleUpdate" styleClass="secondary-button" text="Update Subject" />
+            <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="danger-button" text="Delete Subject" />
+            <Button fx:id="clearButton" onAction="#handleClear" styleClass="outline-button" text="Clear Form" />
+         </HBox>
+      </VBox>
+      
+      <!-- Subjects Table -->
+      <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+         <Label styleClass="section-title" text="Subjects List" />
+         
+         <TableView fx:id="subjectsTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="subjectNameColumn" prefWidth="300.0" text="Subject Name" />
+               <TableColumn fx:id="maxMarksColumn" prefWidth="150.0" text="Maximum Marks" />
+            </columns>
+         </TableView>
+      </VBox>
+   </VBox>
+</AnchorPane>
