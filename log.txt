@@ -1,3 +1,4 @@
 2025-07-17 Initial project structure with JavaFX and Maven setup
 2025-07-18 Added DatabaseManager and integrated MySQL connector
 2025-07-19 Implemented Login UI and linked LoginController
+2025-07-20 Created sample schema and seeded test student data
