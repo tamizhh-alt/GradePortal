@@ -3,3 +3,4 @@
 2025-07-19 Implemented Login UI and linked LoginController
 2025-07-20 Created sample schema and seeded test student data
 2025-07-21 Connected login credentials to DB and added alert handling
+2025-07-22 Designed main dashboard layout with basic tab structure
