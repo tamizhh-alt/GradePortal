@@ -4,3 +4,4 @@
 2025-07-20 Created sample schema and seeded test student data
 2025-07-21 Connected login credentials to DB and added alert handling
 2025-07-22 Designed main dashboard layout with basic tab structure
+2025-07-23 Applied modern CSS theming to login and main views
