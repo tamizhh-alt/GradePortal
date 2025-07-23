@@ -5,3 +5,4 @@
 2025-07-21 Connected login credentials to DB and added alert handling
 2025-07-22 Designed main dashboard layout with basic tab structure
 2025-07-23 Applied modern CSS theming to login and main views
+2025-07-24 Integrated subject and marks management modules
