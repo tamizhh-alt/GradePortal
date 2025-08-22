@@ -28,7 +28,7 @@ public class LoginController {
         String password = passwordField.getText().trim();
 
         try (Connection conn = DatabaseManager.getConnection()) {
-            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+            String query = "SELECT username FROM users WHERE username = ? AND password = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, username);
             stmt.setString(2, password); // 🔒 Use hashed password in production
@@ -36,10 +36,14 @@ public class LoginController {
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 showAlert("Login Successful", "Welcome " + username);
-
-                // Load main dashboard scene
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainWindow.fxml"));
+                
+                // Load admin dashboard scene
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AdminDashboard.fxml"));
                 Parent mainRoot = loader.load();
+
+                // Pass admin name to controller
+                AdminDashboardController controller = loader.getController();
+                controller.setAdminName(username);
 
                 Scene mainScene = new Scene(mainRoot, 1200, 800);
                 mainScene.getStylesheets().add(getClass().getResource("/css/application.css").toExternalForm());
@@ -47,7 +51,7 @@ public class LoginController {
                 // Switch stage
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(mainScene);
-                stage.setTitle("Grades & Marks Portal System");
+                stage.setTitle("Admin Dashboard - Grades & Marks Portal System");
                 stage.setMinWidth(1000);
                 stage.setMinHeight(600);
                 stage.show();

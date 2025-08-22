@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.AdminDashboardController">
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="header-bar">
+         <padding>
+            <Insets bottom="12.0" left="20.0" right="20.0" top="12.0" />
+         </padding>
+         <Label text="Grades &amp; Marks Portal" styleClass="app-title" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Label fx:id="welcomeLabel" text="Welcome, Admin" styleClass="time-label" />
+      </HBox>
+   </top>
+   <left>
+      <VBox spacing="10.0" styleClass="sidebar">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <Label text="Menu" styleClass="section-title" />
+         <Button text="Dashboard" styleClass="primary-button" />
+         <Button text="Students" />
+         <Button text="Subjects" />
+         <Button text="Marks" />
+         <Button text="Results" />
+      </VBox>
+   </left>
+   <center>
+      <VBox spacing="15.0">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <Label text="Students Overview" styleClass="page-title" />
+         <TableView fx:id="studentsTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="nameColumn" prefWidth="220.0" text="Student Name" />
+               <TableColumn fx:id="rollNumberColumn" prefWidth="140.0" text="Roll Number" />
+               <TableColumn fx:id="classColumn" prefWidth="120.0" text="Class" />
+               <TableColumn fx:id="registrationDateColumn" prefWidth="160.0" text="Registration Date" />
+            </columns>
+         </TableView>
+      </VBox>
+   </center>
+</BorderPane>
+
+
+
