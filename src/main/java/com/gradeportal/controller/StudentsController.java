@@ -9,6 +9,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -319,5 +324,26 @@ public class StudentsController implements Initializable {
         }
         
         return true;
+    }
+
+    /**
+     * Navigate back to Admin Dashboard
+     */
+    @FXML
+    private void handleBackToDashboard() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AdminDashboard.fxml"));
+            Parent root = loader.load();
+            
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/css/application.css").toExternalForm());
+            
+            Stage stage = (Stage) nameTextField.getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Admin Dashboard - Grades & Marks Portal System");
+            stage.show();
+        } catch (IOException e) {
+            AlertUtil.showError("Navigation Error", "Failed to return to dashboard", e.getMessage());
+        }
     }
 }

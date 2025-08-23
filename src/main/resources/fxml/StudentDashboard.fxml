@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gradeportal.controller.StudentDashboardController">
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="header-bar">
+         <padding>
+            <Insets bottom="12.0" left="20.0" right="20.0" top="12.0" />
+         </padding>
+         <Label text="Student Dashboard - Grades &amp; Marks Portal" styleClass="app-title" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Label fx:id="welcomeLabel" text="Welcome, Student" styleClass="time-label" />
+         <Button text="Logout" onAction="#handleLogout" styleClass="logout-button" />
+      </HBox>
+   </top>
+   <left>
+      <VBox spacing="10.0" styleClass="sidebar">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <Label text="Student Menu" styleClass="section-title" />
+         <Button text="Profile" onAction="#showProfile" styleClass="primary-button" />
+         <Button text="My Courses" onAction="#showCourses" />
+         <Button text="My Grades" onAction="#showGrades" />
+         <Button text="Download Report" onAction="#downloadReport" />
+      </VBox>
+   </left>
+   <center>
+      <VBox spacing="15.0">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         
+         <!-- Profile Section -->
+         <VBox fx:id="profileSection" spacing="10.0" visible="true">
+            <Label text="Student Profile" styleClass="page-title" />
+            <GridPane hgap="10.0" vgap="10.0">
+               <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <Label fx:id="studentNameLabel" text="Loading..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
+               
+               <Label text="Roll Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <Label fx:id="rollNumberLabel" text="Loading..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               
+               <Label text="Class:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+               <Label fx:id="classLabel" text="Loading..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               
+               <Label text="Registration Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+               <Label fx:id="registrationDateLabel" text="Loading..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </GridPane>
+         </VBox>
+         
+         <!-- Courses Section -->
+         <VBox fx:id="coursesSection" spacing="10.0" visible="false">
+            <Label text="Enrolled Courses" styleClass="page-title" />
+            <TableView fx:id="coursesTable" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="subjectNameColumn" prefWidth="200.0" text="Subject Name" />
+                  <TableColumn fx:id="subjectCodeColumn" prefWidth="150.0" text="Subject Code" />
+                  <TableColumn fx:id="creditsColumn" prefWidth="100.0" text="Credits" />
+               </columns>
+            </TableView>
+         </VBox>
+         
+         <!-- Grades Section -->
+         <VBox fx:id="gradesSection" spacing="10.0" visible="false">
+            <Label text="My Grades" styleClass="page-title" />
+            <TableView fx:id="gradesTable" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="gradeSubjectColumn" prefWidth="200.0" text="Subject" />
+                  <TableColumn fx:id="gradeMarksColumn" prefWidth="100.0" text="Marks" />
+                  <TableColumn fx:id="gradeGradeColumn" prefWidth="100.0" text="Grade" />
+                  <TableColumn fx:id="gradeDateColumn" prefWidth="150.0" text="Date" />
+               </columns>
+            </TableView>
+         </VBox>
+      </VBox>
+   </center>
+</BorderPane>
+
+

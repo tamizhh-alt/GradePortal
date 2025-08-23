@@ -252,6 +252,32 @@ public class StudentDAO {
     }
     
     /**
+     * Get student by username (for login purposes)
+     * @param username Username to search for
+     * @return Student object or null if not found
+     * @throws SQLException if database error occurs
+     */
+    public Student getStudentByUsername(String username) throws SQLException {
+        String sql = "SELECT s.* FROM students s " +
+                    "INNER JOIN users u ON s.roll_number = u.username " +
+                    "WHERE u.username = ?";
+        
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setString(1, username);
+            
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return mapResultSetToStudent(rs);
+                }
+            }
+        }
+        
+        return null;
+    }
+    
+    /**
      * Map ResultSet to Student object
      * @param rs ResultSet
      * @return Student object

@@ -1,17 +1,20 @@
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\dao\MarkDAO.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\GradePortalApp.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\model\Mark.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\dao\StudentDAO.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\util\GradeCalculator.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\module-info.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\controller\SubjectsController.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\controller\DashboardController.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\util\DatabaseManager.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\controller\StudentsController.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\model\Subject.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\controller\MainController.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\model\Student.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\dao\SubjectDAO.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\util\AlertUtil.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\controller\ResultsController.java
-T:\new downloads'\grade&portalBOLT(1)\project\src\main\java\com\gradeportal\controller\MarksController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\util\DatabaseManager.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\DashboardController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\StudentsController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\SubjectsController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\util\GradeCalculator.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\StudentDashboardController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\model\Subject.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\LoginController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\util\AlertUtil.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\model\Mark.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\model\Student.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\dao\MarkDAO.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\MarksController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\GradePortalApp.java
+T:\gradeportal\GradePortal\src\main\java\module-info.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\AdminDashboardController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\dao\SubjectDAO.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\ResultsController.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\dao\StudentDAO.java
+T:\gradeportal\GradePortal\src\main\java\com\gradeportal\controller\MainController.java
